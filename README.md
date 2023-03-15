@@ -1,6 +1,6 @@
 # Код для презентации "7 раз измерь, 1 раз задеплой"
 
-### Слайды доступны по ссылке: https://slides.com/swizbiz/profiling
+### Слайды доступны по ссылке: https://slides.com/swizbiz/profiling/fullscreen
 
 ### Файлы:
 > `com/example/profiling/demo/Demo.java` - пример для профилирования.
