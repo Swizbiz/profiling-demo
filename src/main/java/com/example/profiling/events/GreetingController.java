@@ -12,6 +12,7 @@ public class GreetingController {
     public String greetings(@PathVariable("name") String name) throws InterruptedException {
         final GreetingEvent event = new GreetingEvent();
         if (event.isEnabled()) {
+            event.name = name;
             event.invokeDate = System.currentTimeMillis();
             event.size = name.getBytes(StandardCharsets.UTF_8).length;
             event.classValue = this.getClass();
@@ -21,7 +22,6 @@ public class GreetingController {
             //2 methods with different exec time
             if (name.startsWith("A")) {
                 GreetingController.doWork();
-                event.name = name;
             } else {
                 GreetingController.doMoreWork();
             }
