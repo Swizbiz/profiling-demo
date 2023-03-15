@@ -5,19 +5,11 @@ public class Demo {
         System.out.println("\nSTART APPLICATION");
         for (int i = 0; i < 200_000_000; i++) {
             String[] split = "1,1:2,2".split(":");
-            split[0] = Demo.eleven();
-//            split[0] = Demo.substringWithDelay(split[0]);
+//            split[0] = "11";
+            split[0] = split[0].substring(2);
             split[1] = "22";
         }
         System.out.println("FINISH APPLICATION");
     }
 
-    private static String eleven() {
-        return "11";
-    }
-
-    private static String substringWithDelay(String str) throws InterruptedException {
-        Thread.sleep(1);
-        return str.substring(2);
-    }
 }
